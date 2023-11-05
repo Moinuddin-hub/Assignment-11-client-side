@@ -1,9 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import {createBrowserRouter, RouterProvider,} from "react-router-dom";
 import Home from './Pages/Home';
 import './index.css'
 import Login from './Routes/Login';
@@ -38,11 +35,9 @@ const router = createBrowserRouter([
      {
       path:'/register',
       element:<Register></Register>
-     }
-      
+     } 
     ]
   },
-
 ]);
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

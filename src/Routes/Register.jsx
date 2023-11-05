@@ -9,48 +9,36 @@ const Register = () => {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-
         // get field values 
         const name = event.target.name.value;
         const email = event.target.email.value;
         const img = event.target.img.value;
         const password = event.target.password.value;
 
-
         // validation 
         if (password.length < 6) {
             toast.error('Password must be at least 6 characters');
             return;
         }
-
-
         // creating a new user
         createUser(email, password)
             .then(()=> {
                 handleUpdateProfile(name, img)
                     .then(() => {
                         toast.success('User created successfully');
-                        navigate('/')
-
+                        navigate('/login')
                     })
             })
             .catch(error => {
                 toast.error(error.message)
             })
-
-
-
-
     }
 
     return (
         <>
             <div className="hero min-h-screen bg-base-200">
                 <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="text-center lg:text-left">
-                        <h1 className="text-5xl font-bold">Register now!</h1>
-                        <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
-                    </div>
+               
                     <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                         <form onSubmit={handleSubmit} className="card-body">
                             <div className="form-control">
