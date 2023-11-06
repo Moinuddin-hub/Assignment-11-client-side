@@ -10,6 +10,7 @@ import Service from './Routes/Service';
  import Dashboard from './Routes/Dashboard';
  import AuthProvider from './Pages/Provider/AuthProvider';
  import PrivateRoute from './Pages/Provider/PrivateRoute';
+ import AddService from './Components/AddService/AddService';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,8 +18,9 @@ const router = createBrowserRouter([
     children:[
       {
         path:'/home',
-        element:<Home></Home>
-
+        element:<Home></Home>,
+        loader:()=>fetch('http://localhost:5000/users')
+          
       },
       {
         path:'/service',
@@ -35,6 +37,10 @@ const router = createBrowserRouter([
      {
       path:'/register',
       element:<Register></Register>
+     },
+     {
+      path:'/addService',
+      element:<AddService></AddService>
      } 
     ]
   },

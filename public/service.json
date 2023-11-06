@@ -1,6 +1,6 @@
 [
     {
-        "id":1,
+        "id":"1",
         "Image":"https://i.ibb.co/F38mc6X/electrical.jpg",
         "Name": "Electrician",
         "Description": "An electrician is a tradesperson specializing in electrical wiring of buildings, transmission lines, stationary machines, and related equipment.",
@@ -9,7 +9,7 @@
         "ServicePrice": "$199.99"
     },
     {
-      "id":2,
+      "id":"2",
       "Image":"https://i.ibb.co/nPNjN9q/food-delivery-838x525.jpg",
       "Name": "Food Delivery",
       "Description": "t's simple: we list your menu and product lists online, help you process orders, pick them up, and deliver them to hungry pandas – in a heartbeat!",
@@ -18,7 +18,7 @@
       "ServicePrice": "$199.99"
     },
     {
-      "id":3,
+      "id":"3",
       "Image":"https://i.ibb.co/xs7G2sj/cleaning-service.jpg",
       "Name": "Cleaning",
       "Description": "In the kitchen, wiping surfaces, keeping tabs on the fridge and washing dishes every day will prevent big time-consuming messes down the line.",
@@ -27,7 +27,7 @@
       "ServicePrice": "$199.99"
     },
     {
-        "id":4,
+        "id":"4",
         "Image":"https://i.ibb.co/SxbxtVJ/Repair-1.jpg",
         "Name": "Repair",
         "Description": "WebRepair Office. The steps to access the repair tool vary depending on your operating system. Right-click the Start button (lower-left corner)",
