@@ -1,5 +1,5 @@
 
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner/Banner";
 import ServiceCard from "./Services/ServiceCard";
 import About from "./About/About";
@@ -22,7 +22,7 @@ const Home = () => {
           }
          </div>
             <div className="mx-auto w-full text-center">
-            <button className="btn btn-primary  mt-5">Show all</button>
+           <Link to='/service'> <button className="btn btn-primary  mt-5">Show all</button></Link>
             </div>
           </div>
           <About></About>
