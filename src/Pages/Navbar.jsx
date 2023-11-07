@@ -90,7 +90,7 @@ return (
                 <li className="py-4"> <NavLink to='/addService'className={({isActive})=>
                 isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
                 Add-services</NavLink></li>
-                <li> <NavLink to='/home'className={({isActive})=>
+                <li> <NavLink to='' className={({isActive})=>
                 isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
                 My-schedules</NavLink></li>
           </ul>

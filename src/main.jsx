@@ -11,10 +11,13 @@ import Service from './Routes/Service';
  import AuthProvider from './Pages/Provider/AuthProvider';
  import PrivateRoute from './Pages/Provider/PrivateRoute';
  import AddService from './Components/AddService/AddService';
+ import ErrorPage from './Pages/ErrorPage/ErrorPage';
+ import Details from './Routes/Details/Details';
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    ErrorPage:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/home',
@@ -24,7 +27,15 @@ const router = createBrowserRouter([
       },
       {
         path:'/service',
-        element:<Service></Service>
+        element:<Service></Service>,
+        loader:()=>fetch('http://localhost:5000/users')
+
+      },
+      {
+         path:'/details/:_id',
+         element:<Details></Details>,
+         loader:({params})=>fetch(`http://localhost:5000/users/${params._id}`)
+      
       },
      {
       path:'/dashboard',

@@ -1,10 +1,7 @@
-import { Link } from "react-router-dom";
 
 
-const ServiceCard = ({data}) => {
-  
-
-    const {_id,service,Photo,price,Image,Email,name,area,description}=data;
+const AllServiceCard = ({item}) => {
+    const {service,Photo,price,Image,Email,name,area,description}=item;
     return (
         <div>
         <div className="card card-compact w-96 h-96 shadow-xl">
@@ -20,7 +17,7 @@ const ServiceCard = ({data}) => {
             <img src={Photo} alt="" className=" w-12 h-12 rounded-full" />
             <h2 className="text-xl font-bold">{name}</h2>
         </div>
-      <Link to={`/details/${_id}`}><button className="btn btn-primary">View Details</button></Link>
+      <button className="btn btn-primary">View Details</button>
     </div>
   </div>
 </div>
@@ -28,4 +25,4 @@ const ServiceCard = ({data}) => {
     );
 };
 
-export default ServiceCard;
+export default AllServiceCard;
