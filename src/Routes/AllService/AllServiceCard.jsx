@@ -10,8 +10,8 @@ const AllServiceCard = ({item}) => {
       <div className="flex items-center justify-between">
       <h2 className="card-title font-bold">{service}</h2>
       <div className="">
-      <h1 className="text-xl font-bold">TK:{price}</h1>
-      <h2 className="text-xl font-bold">{area}</h2>
+      <h1 className="text-xl font-bold ml-20">TK:{price}</h1>
+      <h2 className="text-xl font-semibold ">Location:{area}</h2>
       </div>
      </div>
     <p>{description}</p>

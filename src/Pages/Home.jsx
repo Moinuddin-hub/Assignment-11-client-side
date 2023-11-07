@@ -6,8 +6,8 @@ import About from "./About/About";
 import Footer from "./Footer/Footer";
 import Feedback from "./Feedback/Feedback";
 const Home = () => {
-    const user=useLoaderData();
-    // const user=users.slice(0,4);
+    const users=useLoaderData();
+    const user=users.slice(0,4);
 
    
     return (
