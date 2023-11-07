@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 
 const AllServiceCard = ({item}) => {
-    const {service,Photo,price,Image,Email,name,area,description}=item;
+    const {_id,service,Photo,price,Image,Email,name,area,description}=item;
     return (
         <div>
         <div className="card card-compact w-96 h-96 shadow-xl">
@@ -21,7 +22,7 @@ const AllServiceCard = ({item}) => {
          <h2 className="text-xl font-bold">{name}</h2>
          
       </div>
-    <button className="btn btn-primary">View Details</button>
+    <Link to={`/serviceDetails/${_id}`}><button className="btn btn-primary">View Details</button></Link>
    </div>
  </div>
  </div> 

@@ -13,6 +13,7 @@ import Service from './Routes/Service';
  import AddService from './Components/AddService/AddService';
  import ErrorPage from './Pages/ErrorPage/ErrorPage';
  import Details from './Routes/Details/Details';
+ import ServiceDetails from './Routes/Details/ServiceDetails';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
          element:<Details></Details>,
          loader:({params})=>fetch(`http://localhost:5000/users/${params._id}`)
       
+      },
+      {
+       path:'/serviceDetails/:_id',
+       element:<ServiceDetails></ServiceDetails>,
+       loader:({params})=>fetch(`http://localhost:5000/users/${params._id}`)
       },
      {
       path:'/dashboard',
