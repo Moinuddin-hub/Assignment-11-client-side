@@ -33,6 +33,9 @@ return (
         <li>  <NavLink to='/service'className={({isActive})=>
                 isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
                 Service</NavLink></li>
+                <li className="ml-4">  <NavLink to='/manage'className={({isActive})=>
+                isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
+                Manage service</NavLink></li> 
       </ul>
     </div>
    <div className="w-16 h-20 rounded-xl ">
@@ -73,6 +76,9 @@ return (
              <li>  <NavLink to='/service'className={({isActive})=>
                 isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
                 Service</NavLink></li>
+                <li className="ml-4">  <NavLink to='/manage'className={({isActive})=>
+                isActive? 'btn btn-primary btn-sm' :'btn btn-ghost btn-sm'}>
+                Manage service</NavLink></li>
     </ul>
   </div>
   <div className="navbar-end">

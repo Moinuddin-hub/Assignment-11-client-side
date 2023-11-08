@@ -23,7 +23,7 @@ const ServiceDetails = () => {
     const user={service,Photo,price,Image,Email,name,Date,description};
     console.log(user);
    
-    fetch('http://localhost:5000/users',{
+    fetch('http://localhost:5000/bookings',{
         method:'POST',
         headers:{
             'Content-Type': 'application/json'
@@ -46,7 +46,7 @@ const ServiceDetails = () => {
          <div className="mt-2 ">
         <div className="flex gap-8 items-center">
             <img src={Photo} alt="" className=" w-16 h-16 rounded-full" />
-            <h2 className="text-xl font-bold">{name}</h2>
+            <h2 className="text-xl font-bold">Provider Name:<br/>{name}</h2>
         </div>
         <h2 className="text-2xl font-bold">Location:{area}</h2>
          <p className="w-46">I am repair man won't you take a bow, come on give me space, tell me which part aches
