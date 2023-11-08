@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Pages/Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import toast from "react-hot-toast";
 
 
 const Update = () => {
@@ -17,7 +18,21 @@ const Update = () => {
     const name=e.target.name.value;
     const area=e.target.area.value;
     const description=e.target.description.value;
-    const user={service,Photo,price,Image,Email,name,area,description};
+    const updateData={service,Photo,price,Image,Email,name,area,description};
+    fetch(`http://localhost:5001/users/${update._id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updateData),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if(data.modifiedCount>0){
+            toast.success('Update date successfully!')
+        }
+      });
   }
 
     return (
