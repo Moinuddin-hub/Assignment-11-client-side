@@ -4,11 +4,14 @@ const Footer = () => {
         <div className="mt-8">
   <footer className="footer grid grid-cols-3 w-1/2 lg:grid-cols-3 lg:w-full p-10 bg-base-300 text-base-content">
   <nav>
+   
+
     <header className="footer-title">Services</header> 
     <a className="link link-hover">Branding</a> 
     <a className="link link-hover">Design</a> 
     <a className="link link-hover">Marketing</a> 
     <a className="link link-hover">Advertisement</a>
+  
   </nav> 
   <nav>
     <header className="footer-title">Company</header> 
@@ -25,8 +28,15 @@ const Footer = () => {
       <a><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" className="fill-current"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path></svg></a>
     </div>
   </nav>
+ <div className="">
+ <p className="text-xl font-bold">Home service Exchange</p>
+  <div className="w-16 h-20 rounded-xl ">
+   <img src="https://i.ibb.co/BLjySXK/logo.jpg" alt="" className=" rounded-lg" />
+   </div>
+  <p className="">@copyright</p>  
+ </div>
 </footer>
-            
+  
         </div>
     );
 };
