@@ -82,14 +82,14 @@ const AddService = () => {
           <label className="label">
             <span className="label-text font-bold">Email</span>
           </label>
-          <input type="email" name="email" defaultValue={user?.email}  placeholder="email" className="input input-bordered" required />
+          <input type="email" name="email" disabled  defaultValue={user?.email}  placeholder="email" className="input input-bordered" required />
         </div>
 
         <div className="form-control">
           <label className="label">
             <span className="label-text font-bold">Your Name</span>
           </label>
-          <input type="text" name="name" defaultValue={user?.displayName}  placeholder="provider name" className="input input-bordered" required />
+          <input type="text" name="name" disabled defaultValue={user?.displayName}  placeholder="provider name" className="input input-bordered" required />
       
         </div>
 
