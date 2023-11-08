@@ -5,7 +5,7 @@ import ServiceCard from "./Services/ServiceCard";
 import About from "./About/About";
 import Footer from "./Footer/Footer";
 import Feedback from "./Feedback/Feedback";
-// import MapContainer from "../Components/MapContainer";
+import Contact from "../Components/Contact/Contact";
 const Home = () => {
     const users=useLoaderData();
     const user=users.slice(0,4);
@@ -17,7 +17,7 @@ const Home = () => {
           <div className=" mt-10">
 
           <h2 className="text-5xl font-bold text-center ">Our service</h2>
-         <div className=" grid grid-cols-2 gap-4 ml-16 mt-10">
+         <div className=" bg-slate-100 py-4 grid grid-cols-2 gap-4 w-full mt-10">
          {
             user.map(data=><ServiceCard key={data._id} data={data}></ServiceCard>)
           }
@@ -27,6 +27,7 @@ const Home = () => {
             </div>
           </div>
           <About></About>
+          <Contact></Contact>
           <Feedback></Feedback>
           {/* <MapContainer></MapContainer> */}
           <Footer></Footer>

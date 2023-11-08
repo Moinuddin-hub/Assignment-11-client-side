@@ -1,9 +1,9 @@
 
 const About = () => {
     return (
-        <div className="mt-14">
+        <div className="mt-14 bg-slate-300">
           <h2 className="text-5xl font-bold text-center">About Us</h2>  
-    <div className="hero h-96 ">
+    <div className="hero h-72 ">
   <div className="hero-content flex-col lg:flex-row">
     <img src="https://i.ibb.co/2d5cLG4/Home.jpg" className="max-w-sm rounded-lg shadow-2xl" />
     <div>

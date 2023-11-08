@@ -11,20 +11,21 @@ const Update = () => {
   const handleUpdate=(e)=>{
     e.preventDefault();
     const service=e.target.service.value;
-    const Photo=e.target.photo.value;
+    const photo=e.target.photo.value;
     const price=e.target.price.value;
-    const Image=e.target.image.value;
-    const Email=e.target.email.value;
+    const image=e.target.image.value;
+    const email=e.target.email.value;
     const name=e.target.name.value;
     const area=e.target.area.value;
     const description=e.target.description.value;
-    const updateData={service,Photo,price,Image,Email,name,area,description};
-    fetch(`http://localhost:5001/users/${update._id}`, {
+    const user={service,photo,price,image,email,name,area,description};
+    console.log(user);
+    fetch(`http://localhost:5000/users/${update._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(updateData),
+      body: JSON.stringify(user),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -37,7 +38,12 @@ const Update = () => {
 
     return (
         <div>
-              <form  className="p-16">
+          
+      <form  onSubmit={handleUpdate} className="p-16">
+
+      <div className="text-center mt-4">
+            <h2 className="text-3xl font-bold">Update</h2>
+          </div>
      <div className="grid grid-cols-2 gap-4"> 
       <div className="">
         <div className="form-control">
@@ -109,7 +115,7 @@ const Update = () => {
 
 
         <div className="form-control mt-6">
-          <button onClick={handleUpdate} className="btn btn-primary font-bold">Update</button>
+          <button  className="btn btn-primary font-bold">Update</button>
         </div>
       </form> 
         </div>

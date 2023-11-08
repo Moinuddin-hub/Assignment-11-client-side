@@ -12,7 +12,7 @@ import Service from './Routes/Service';
  import PrivateRoute from './Pages/Provider/PrivateRoute';
  import AddService from './Components/AddService/AddService';
  import ErrorPage from './Pages/ErrorPage/ErrorPage';
- import Details from './Routes/Details/Details';
+
  import ServiceDetails from './Routes/Details/ServiceDetails';
  import Manage from './Routes/Manage/Manage';
  import Update from './Routes/Update/Update';
@@ -34,12 +34,7 @@ const router = createBrowserRouter([
         loader:()=>fetch('http://localhost:5000/users')
 
       },
-      {
-         path:'/details/:_id',
-         element:<Details></Details>,
-         loader:({params})=>fetch(`http://localhost:5000/users/${params._id}`)
-      
-      },
+
       {
        path:'/serviceDetails/:_id',
        element:<ServiceDetails></ServiceDetails>,
