@@ -3,8 +3,8 @@
 const Feedback = () => {
     return (
         <div>
-            <h2 className="text-4xl font-bold text-center mt-4 text-green-500">Feedback Corner</h2>
-            <div className=" grid grid-cols-3 gap-8 mt-4">
+            <h2 className="text-4xl font-bold text-center mt-4 w-1/2 lg:w-full text-green-500">Feedback Corner</h2>
+            <div className=" grid grid-col-1 lg:grid-cols-3 ml-16 lg:ml-0 gap-8 mt-8">
             <div className="card w-96 transition ease-in-out delay-150 bg-blue-500 hover:-translate-y-1 hover:scale-110  duration-300 hover:bg-primary text-primary-content">
   <div className="card-body">
     <h2 className="card-title">MD:AKRUM KHUN</h2>
