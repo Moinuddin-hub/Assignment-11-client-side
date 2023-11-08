@@ -5,6 +5,7 @@ import ServiceCard from "./Services/ServiceCard";
 import About from "./About/About";
 import Footer from "./Footer/Footer";
 import Feedback from "./Feedback/Feedback";
+// import MapContainer from "../Components/MapContainer";
 const Home = () => {
     const users=useLoaderData();
     const user=users.slice(0,4);
@@ -27,6 +28,7 @@ const Home = () => {
           </div>
           <About></About>
           <Feedback></Feedback>
+          {/* <MapContainer></MapContainer> */}
           <Footer></Footer>
         </div>
     );
