@@ -15,6 +15,7 @@ import Service from './Routes/Service';
  import Details from './Routes/Details/Details';
  import ServiceDetails from './Routes/Details/ServiceDetails';
  import Manage from './Routes/Manage/Manage';
+ import Update from './Routes/Update/Update';
 const router = createBrowserRouter([
   {
     path: "/",
@@ -64,6 +65,11 @@ const router = createBrowserRouter([
       path:'/manage',
       element:<Manage></Manage>,
       loader:()=>fetch('http://localhost:5000/users')
+     },
+     {
+      path:'/update/:id',
+      element:<Update></Update>,
+      loader:({params})=>fetch(`http://localhost:5000/users/${params.id}`)
      } 
     ]
   },

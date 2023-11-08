@@ -46,9 +46,12 @@ const ServiceDetails = () => {
          <div className="mt-2 ">
         <div className="flex gap-8 items-center">
             <img src={Photo} alt="" className=" w-16 h-16 rounded-full" />
+            <div className="">
             <h2 className="text-xl font-bold">Provider Name:<br/>{name}</h2>
+            <h2 className="text-2xl font-bold">Location:{area}</h2>
+            </div>
         </div>
-        <h2 className="text-2xl font-bold">Location:{area}</h2>
+       
          <p className="w-46">I am repair man won't you take a bow, come on give me space, tell me which part aches
        </p>
        </div>

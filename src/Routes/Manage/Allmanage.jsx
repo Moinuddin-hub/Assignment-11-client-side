@@ -1,3 +1,4 @@
+import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 
 
@@ -5,6 +6,17 @@ const AllManage = ({item}) => {
 
     const handleDelete =(_id)=>{
         console.log(_id);
+        fetch(`http://localhost:5000/users/${_id}`,{
+            method:'DELETE'
+        })
+
+        .then(res=>res.json())
+        .then(data=>{
+        console.log(data);
+        if (data.deletedCount > 0) {
+            toast.success('Successfully Delete!')
+          }
+        })
     }
     console.log(item);
     const {_id,service,Photo,price,Image,Email,name,area,description}=item;
@@ -27,7 +39,7 @@ const AllManage = ({item}) => {
          <h2 className="text-xl font-bold">{name}</h2>
          
       </div>
-      <Link to={`/serviceDetails/${_id}`}><button className="btn btn-primary">Edit</button></Link>
+      <Link to={`/update/${_id}`}><button className="btn btn-primary">Edit</button></Link>
 <button onClick={()=>handleDelete(item._id)} className="btn btn-primary">Delete</button>
    </div>
  </div>
