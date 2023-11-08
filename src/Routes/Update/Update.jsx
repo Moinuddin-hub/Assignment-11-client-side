@@ -1,9 +1,25 @@
 import { useContext } from "react";
 import { AuthContext } from "../../Pages/Provider/AuthProvider";
+import { useLoaderData } from "react-router-dom";
 
 
 const Update = () => {
     const {user}=useContext(AuthContext);
+    const update=useLoaderData();
+    console.log(update);
+  const handleUpdate=(e)=>{
+    e.preventDefault();
+    const service=e.target.service.value;
+    const Photo=e.target.photo.value;
+    const price=e.target.price.value;
+    const Image=e.target.image.value;
+    const Email=e.target.email.value;
+    const name=e.target.name.value;
+    const area=e.target.area.value;
+    const description=e.target.description.value;
+    const user={service,Photo,price,Image,Email,name,area,description};
+  }
+
     return (
         <div>
               <form  className="p-16">
@@ -13,7 +29,7 @@ const Update = () => {
           <label className="label">
             <span className="label-text font-bold">Service Name</span>
           </label>
-          <input type="text" name="service" placeholder="Write name" className="input input-bordered" required />
+          <input type="text" defaultValue={update?.service} name="service" placeholder="Write name" className="input input-bordered" required />
         </div>
 
         <div className="form-control">
@@ -78,7 +94,7 @@ const Update = () => {
 
 
         <div className="form-control mt-6">
-          <button className="btn btn-primary font-bold">Update</button>
+          <button onClick={handleUpdate} className="btn btn-primary font-bold">Update</button>
         </div>
       </form> 
         </div>
