@@ -25,20 +25,20 @@ const router = createBrowserRouter([
       {
         path:'/home',
         element:<Home></Home>,
-        loader:()=>fetch('http://localhost:5000/users')
+        loader:()=>fetch('https://assignment-11-server-plum-gamma.vercel.app/users')
           
       },
       {
         path:'/service',
         element:<Service></Service>,
-        loader:()=>fetch('http://localhost:5000/users')
+        loader:()=>fetch(' https://assignment-11-server-plum-gamma.vercel.app/users')
 
       },
 
       {
        path:'/serviceDetails/:_id',
        element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
-       loader:({params})=>fetch(`http://localhost:5000/users/${params._id}`)
+       loader:({params})=>fetch(` https://assignment-11-server-plum-gamma.vercel.app/users/${params._id}`)
       },
      {
       path:'/dashboard',
@@ -59,12 +59,12 @@ const router = createBrowserRouter([
      {
       path:'/manage',
       element:<PrivateRoute><Manage></Manage></PrivateRoute>,
-      loader:()=>fetch('http://localhost:5000/users')
+      loader:()=>fetch(' https://assignment-11-server-plum-gamma.vercel.app/users')
      },
      {
       path:'/update/:id',
       element:<Update></Update>,
-      loader:({params})=>fetch(`http://localhost:5000/users/${params.id}`)
+      loader:({params})=>fetch(` https://assignment-11-server-plum-gamma.vercel.app/users/${params.id}`)
      } 
     ]
   },

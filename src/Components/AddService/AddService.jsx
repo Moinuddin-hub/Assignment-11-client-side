@@ -18,7 +18,7 @@ const AddService = () => {
         const area=e.target.area.value;
         const description=e.target.description.value;
         const user={service,Photo,price,Image,Email,name,area,description};
-        fetch('http://localhost:5000/users',{
+        fetch(' https://assignment-11-server-plum-gamma.vercel.app/users',{
             method:'POST',
             headers:{
                 'Content-Type': 'application/json'

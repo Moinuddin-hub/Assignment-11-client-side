@@ -20,7 +20,7 @@ const Update = () => {
     const description=e.target.description.value;
     const user={service,photo,price,image,email,name,area,description};
     console.log(user);
-    fetch(`http://localhost:5000/users/${update._id}`, {
+    fetch(` https://assignment-11-server-plum-gamma.vercel.app/users/${update._id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -73,7 +73,7 @@ const Update = () => {
           <label className="label">
             <span className="label-text font-bold">Service Image</span>
           </label>
-          <input type="text" name="image"   placeholder="write price" className="input input-bordered" required />
+          <input type="text" name="image"   placeholder="Provide image" className="input input-bordered" required />
 
         </div>
       </div>
@@ -107,7 +107,7 @@ const Update = () => {
           <label className="label">
             <span className="label-text font-bold">Description</span>
           </label>
-          <input type="text" name="description"   placeholder="write description" className="input input-bordered" required />
+          <input type="text" name="description"  placeholder="write description" className="input input-bordered" required />
         </div>
         </div>
    </div>

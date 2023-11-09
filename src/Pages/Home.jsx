@@ -6,9 +6,14 @@ import About from "./About/About";
 import Footer from "./Footer/Footer";
 import Feedback from "./Feedback/Feedback";
 import Contact from "../Components/Contact/Contact";
+import { useEffect } from "react";
 const Home = () => {
     const users=useLoaderData();
     const user=users.slice(0,4);
+
+    useEffect(()=>{
+      document.title = 'Home'
+    },[])
 
    
     return (

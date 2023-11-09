@@ -23,7 +23,7 @@ const ServiceDetails = () => {
     const user={service,Photo,price,Image,Email,name,Date,description};
     console.log(user);
    
-    fetch('http://localhost:5000/bookings',{
+    fetch(' https://assignment-11-server-plum-gamma.vercel.app/bookings',{
         method:'POST',
         headers:{
             'Content-Type': 'application/json'

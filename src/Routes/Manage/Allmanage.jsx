@@ -6,7 +6,7 @@ const AllManage = ({item}) => {
 
     const handleDelete =(_id)=>{
         console.log(_id);
-        fetch(`http://localhost:5000/users/${_id}`,{
+        fetch(` https://assignment-11-server-plum-gamma.vercel.app/users/${_id}`,{
             method:'DELETE'
         })
 
